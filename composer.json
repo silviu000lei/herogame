@@ -1,15 +1,21 @@
 {
-  "name": "$vendor_name$/$package_name$",
-  "description": "$description$",
-  "minimum-stability": "$stability$",
-  "license": "$license$",
+  "name": "vendor_name/hero",
+  "description": "description",
+  "minimum-stability": "stable",
+  "license": "proprietary",
   "authors": [
     {
-      "name": "$author$",
-      "email": "$email$"
+      "name": "Ion Silviu",
+      "email": "silviu000lei@gmail.com"
     }
   ],
+  "autoload": {
+    "psr-4": {"App\\": "src/"}
+  },
   "require": {
-    $END$
+    "monolog/monolog": "1.0.*"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^8"
   }
 }
