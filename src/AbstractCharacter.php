@@ -4,6 +4,7 @@ namespace App;
 
 class AbstractCharacter
 {
+    private string $name;
     private int $health;
     private int $strength;
     private int $defence;
@@ -68,5 +69,21 @@ class AbstractCharacter
         $this->luck = $luck;
 
         return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getName(): string
+    {
+        return $this->name;
+    }
+
+    /**
+     * @param string $name
+     */
+    public function setName(string $name): void
+    {
+        $this->name = $name;
     }
 }

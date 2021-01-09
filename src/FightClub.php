@@ -6,8 +6,8 @@ class FightClub
 {
     public function fight(AbstractCharacter $attacker, AbstractCharacter $defender): array
     {
-        $nameAttacker = get_class($attacker);
-        $nameDefender = get_class($defender);
+        $nameAttacker = $attacker->getName();
+        $nameDefender = $defender->getName();
         echo "{$nameAttacker} attack {$nameDefender}" . Constants::BREAK_LINE;
         $damage = $attacker->getStrength() - $defender->getDefence();
         if ($attacker instanceof Orderus && $attacker->hasRapidStrike()) {
@@ -21,10 +21,10 @@ class FightClub
 
         if ($damage > 0) {
             echo "{$nameAttacker} make {$damage} damage to {$nameDefender}" . Constants::BREAK_LINE;
-            $defender->setHealth($defender->getHealth() - $damage);
+            $defender->setHealth($defender->getHealth() - $damage < 0 ? 0 : $defender->getHealth() - $damage);
         }
 
-        echo "On the end of this round {$nameDefender} remain with {$defender->getHealth()}".Constants::BREAK_LINE;
+        echo "On the end of this round {$nameDefender} remain with {$defender->getHealth()}" . Constants::BREAK_LINE;
 
         return [$attacker, $defender];
     }

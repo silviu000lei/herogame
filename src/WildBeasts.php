@@ -2,7 +2,7 @@
 
 namespace App;
 
-class WildBeast extends AbstractCharacter
+class WildBeasts extends AbstractCharacter
 {
     public const HEALTH_MIN = 60;
     public const HEALTH_MAX = 90;
