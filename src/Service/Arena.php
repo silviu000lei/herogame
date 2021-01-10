@@ -18,7 +18,7 @@ class Arena
         $this->playerTwo = $playerTwo;
     }
 
-    public function battle()
+    public function battle() : void
     {
         [$attacker, $defender] = $this->getAttackerDefenderFirstRound($this->playerOne, $this->playerTwo);
         $fightClub = new FightClub();

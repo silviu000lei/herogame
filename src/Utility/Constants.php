@@ -4,5 +4,5 @@ namespace App\Utility;
 
 class Constants
 {
-    public const  BREAK_LINE = "<br/>";
+    public const BREAK_LINE = "<br/>";
 }
