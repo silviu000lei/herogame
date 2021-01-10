@@ -1,8 +1,9 @@
 <?php
 
-use App\Arena;
-use App\Constants;
-use App\SummonCharacter;
+
+use App\Service\Arena;
+use App\Service\SummonCharacter;
+use App\Utility\Constants;
 
 require_once __DIR__ . '/vendor/autoload.php';
 

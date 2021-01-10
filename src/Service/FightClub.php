@@ -1,6 +1,10 @@
 <?php
 
-namespace App;
+namespace App\Service;
+
+use App\Models\AbstractCharacter;
+use App\Models\Orderus;
+use App\Utility\Constants;
 
 class FightClub
 {

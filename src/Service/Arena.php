@@ -1,6 +1,9 @@
 <?php
 
-namespace App;
+namespace App\Service;
+
+use App\Models\AbstractCharacter;
+use App\Utility\Constants;
 
 class Arena
 {

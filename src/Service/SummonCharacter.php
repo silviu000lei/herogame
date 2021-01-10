@@ -1,6 +1,9 @@
 <?php
 
-namespace App;
+namespace App\Service;
+
+use App\Models\Orderus;
+use App\Models\WildBeasts;
 
 class SummonCharacter
 {
