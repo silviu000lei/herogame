@@ -25,10 +25,10 @@ class FightClub
 
         if ($damage > 0) {
             echo "{$nameAttacker} make {$damage} damage to {$nameDefender}" . Constants::BREAK_LINE;
-            $defender->setHealth($defender->getHealth() - $damage < 0 ? 0 : $defender->getHealth() - $damage);
+            $defender->setHealth(($defender->getHealth() - $damage) <= 0 ? 0 : $defender->getHealth() - $damage);
         }
 
-        echo "On the end of this round {$nameDefender} remain with {$defender->getHealth()}" . Constants::BREAK_LINE;
+        echo "On the end of this round {$nameDefender} remain with {$defender->getHealth()} health points" . Constants::BREAK_LINE;
 
         return [$attacker, $defender];
     }

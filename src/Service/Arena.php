@@ -31,10 +31,10 @@ class Arena
         }
 
         if ($attacker->getHealth() <= 0) {
-            echo $defender->getName() . ' is winner' . Constants::BREAK_LINE;
+            echo $defender->getName() . ' is the winner!!!!!' . Constants::BREAK_LINE;
         }
         if ($defender->getHealth() <= 0) {
-            echo $attacker->getName() . ' is the winner' . Constants::BREAK_LINE;
+            echo $attacker->getName() . ' is the winner!!!!!' . Constants::BREAK_LINE;
         }
     }
 
